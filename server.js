@@ -16,7 +16,9 @@ app.use(express.json({ limit: '5mb' }));
 app.use(cookieParser());
 app.use(helmet());
 app.use(morgan('common'));
-app.use(cors());
+app.use(cors({
+   orgin:"https://social-media-front-end-beta.vercel.app/"
+}));
 const port = process.env.PORT || 3000;
 
 // DB Connection
